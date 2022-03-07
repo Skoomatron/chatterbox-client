@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>chatterbox</title>
+    <title class="title">haterbox</title>
     <link rel="stylesheet" href="client/styles/styles.css">
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/underscore/underscore.js"></script>
@@ -16,26 +16,30 @@
         if (search[search.length - 1] !== '?') {
           search += '&';
         }
-        search += 'username=' + (prompt('What is your name?') || 'anonymous');
+        search += 'username=' + (prompt('What is your name?') || 'anonymous'); // change back to 'anonymous'
         window.location.search = search;
       }
     </script>
   </head>
   <body>
     <div id="main">
-      <h1>chatterbox</h1>
+      <h1>haterbox</h1>
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
         Room:
-        <select></select>
-        <button>Add Room</button>
+        <select name="rooms" id="lobby">
+        </select>
+        <button class="addRoomButton">Add Room</button>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>
         <input type="submit" name="submit" class="submit"/>
       </form>
+      <button class="refresh">Refresh Feed</button>
+      <div id="friendsList">Friend's List</div>
+      <!-- <div id="messageBox">Messages</div> -->
     </div>
-    <div id="chats"></div>
+    <div id="chats">Chats</div>
     <script src="client/env/config.js"></script>
     <script src="client/scripts/parse.js"></script>
     <script src="client/scripts/rooms.js"></script>

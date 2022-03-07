@@ -1,8 +1,9 @@
 body {
-    background: #eee;
+    background: black;
     text-align: center;
     padding: 0 25px;
     font-family: arial, sans-serif;
+    font: white;
 }
 
 #main, #chats {
@@ -11,7 +12,7 @@ body {
     text-align: left;
     background: white;
     padding: 50px 60px;
-    border: solid #ddd;
+    border: solid black;
     border-width: 0 1px 1px 1px;
 }
 
@@ -32,7 +33,8 @@ body {
 
 #main .error {
     border: 1px solid red;
-    background: #FDEFF0;
+    background: white;
+    font: black;
     padding: 20px;
 }
 
@@ -42,7 +44,7 @@ body {
 
 #main .success code {
     font-size: 12px;
-    color: green;
+    color: white;
     line-height: 13px;
 }
 
@@ -62,7 +64,8 @@ form input[type=text] {
 .chat {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: #eee;
+    background-color: white;
+    font: black;
 }
 
 .chat .username {
@@ -82,9 +85,45 @@ form input[type=text] {
 .spinner img {
     padding: 10px;
 }
+.singleMessage{
+    padding: 4px;
+    margin: 4px;
+    border: 4px;
+    border: solid;
+    border-radius: 10px;
+    background-color: white;
+    font: white;
+    display: flex;
+    justify-content: space-around;
 
-.friend {
+}
+.newFriend {
     color: #fff;
-    background-color: #0090da;
+    background-color: black;
+    font: white;
+    display: flex;
+    justify-content: space-around;
+
 }
 
+.text {
+    font: black;
+}
+
+.username:hover {
+    cursor: pointer;
+}
+
+.refresh {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+
+}
+.username {
+    font: white;
+}

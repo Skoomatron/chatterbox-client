@@ -7,6 +7,7 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
+
     // TODO: Perform any work which needs to be done
     // when this view loads.
   },
@@ -25,6 +26,15 @@ var RoomsView = {
 
   handleClick: function(event) {
     // TODO: Handle the user clicking the "Add Room" button.
+    // $('ID/class').on('click', function(event) {
+    // });
+    $('.addRoomButton').on('click', () => {
+      Rooms.addRoom();
+      Rooms.updateRooms();
+      console.log(Rooms.roomStorage);
+    });
+
+
   }
 
 };
